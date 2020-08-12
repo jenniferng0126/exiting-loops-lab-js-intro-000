@@ -20,14 +20,16 @@ function keepGoing(array, changeValue, skipValue) {
 
 function findBy(array, findFn) {
   let found = false;
+  let foundVal;
   for (let i=0; i<array.length; i++) {
     if(array[i] === findFn) {
+      foundVal = array[i];
       found = true;
     }
   }
   if (!found) {
     return null;
   } else {
-    return findFn;
+    return foundVal;
   }
 }
